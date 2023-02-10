@@ -10,8 +10,10 @@ import Trains from './components/trains/Trains';
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
+    <div className="app">
+      <header>
+        <Navbar />
+      </header>
       <main>
         <Routes>
           <Route path='/' element={<Flights />} />

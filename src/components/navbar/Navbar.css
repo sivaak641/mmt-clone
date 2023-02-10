@@ -1,23 +1,29 @@
 .navbar {
-    /* width: 100%; */
+    width: 100%;
     height: 70px;
-    padding: 10px 30px;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
-.navbar .left .logo img{
-    width: 113px;
-    height: 36px;
+
+.navbar .left {
+    width: 100%;
 }
-.navbar .right ul{
+
+.navbar .right ul {
+    width: 100%;
     list-style: none;
     display: flex;
-    /* justify-content: space-between; */
-    /* align-items: center; */
-    gap: 40px;
+    justify-content: space-between;
 }
-ul li .list-item{
+
+ul li .list-item {
     text-decoration: none;
+    color: inherit;
+}
+
+ul li .btn-login {
+    display: flex;
+    align-items: center;
 }
