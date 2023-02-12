@@ -2,10 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './FlightAvailable.css'
 
-const FlightAvailable = ({ data }) => {
+const FlightAvailable = ({ flights }) => {
     return (
         <>
-            {data && data.map((flight, index) => (
+            {flights && flights.map((flight, index) => (
                 <div className="flight_info" key={index}>
                     <table>
                         <thead>
@@ -43,12 +43,14 @@ const FlightAvailable = ({ data }) => {
                         <thead>
                             <tr>
                                 <th>Airline:</th>
+                                <th></th>
                                 <th>Duration</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>{flight.airlineName}</td>
+                                <td></td>
                                 <td>{flight.duration}</td>
                             </tr>
                         </tbody>

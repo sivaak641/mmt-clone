@@ -5,20 +5,23 @@ import FlightSearch from './search/FlightSearch'
 import './Flights.css'
 
 const Flights = () => {
-    const [data, setData] = useState([])
+    const [flights, setFlights] = useState([])
+    const [fetch, setFetch] = useState(false)
     useEffect(() => {
         axios.get('https://content.newtonschool.co/v1/pr/63b85b1209f0a79e89e17e3a/flights')
-            .then(res => setData(res.data))
+            .then(res => setFlights(res.data))
             .catch(error => console.error(error))
-    }, [])
+    }, [fetch])
     return (
         <div className='flights'>
             <div className="search">
-                <FlightSearch />
+                <FlightSearch flights={flights} setFlights={setFlights} setFetch={setFetch} fetch={fetch} />
             </div>
             <div className="available">
+
                 <h2 className='title'>Available Tickets</h2>
-                <FlightAvailable data={data} />
+                <FlightAvailable flights={flights} />
+
             </div>
 
         </div>

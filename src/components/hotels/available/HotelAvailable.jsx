@@ -2,10 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './HotelAvailable.css'
 
-const HotelAvailable = ({ data }) => {
+const HotelAvailable = ({ hotels }) => {
     return (
         <>
-            {data && data.map((hotel, index) => (
+            {hotels && hotels.map((hotel, index) => (
                 <div className="hotel_info" key={index}>
                     <table>
                         <thead>
@@ -39,12 +39,14 @@ const HotelAvailable = ({ data }) => {
                         <thead>
                             <tr>
                                 <th>RATING:</th>
+                                <th></th>
                                 <th>Guests</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>{hotel.rating} / 10</td>
+                                <th></th>
                                 <td>{hotel.guests}</td>
                             </tr>
                         </tbody>

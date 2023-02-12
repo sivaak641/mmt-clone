@@ -5,7 +5,8 @@ import Flights from './components/flights/Flights';
 import Hotels from './components/hotels/Hotels';
 import Login from './components/login/Login';
 import Navbar from './components/navbar/Navbar';
-import Notfound from './components/noPageFound/Notfound';
+import NoPageFound from './components/noPageFound/NoPageFound';
+import SignUp from './components/signup/SignUp';
 import Trains from './components/trains/Trains';
 
 function App() {
@@ -21,8 +22,9 @@ function App() {
           <Route path='/hotels' element={<Hotels />} />
           <Route path='/trains' element={<Trains />} />
           <Route path='/login' element={<Login />} />
+          <Route path='/signup' element={<SignUp />} />
           <Route path='/checkout' element={<Checkout />} />
-          <Route path='*' element={<Notfound />} />
+          <Route path='*' element={<NoPageFound />} />
 
         </Routes>
       </main>

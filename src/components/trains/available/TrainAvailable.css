@@ -1,13 +1,13 @@
 .train_info {
-    margin: 0 0 20px 100px;
-    width: 50%;
+    width: 700px;
+    margin: 20px 0 0 100px;
     border: 2px solid #aaa;
     position: relative;
     padding: 10px;
 }
 
 .train_info table {
-    width: 80%;
+    width: 540px;
 }
 
 table tbody tr td {
@@ -34,7 +34,7 @@ tbody tr td:first-child {
 
 .train_info .booknow {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 }
 
 .booknow .btn-booknow {

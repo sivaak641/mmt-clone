@@ -1,10 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import './Navbar.css'
 import logo from '../../assets/images/Logo.png'
 import PersonIcon from '@mui/icons-material/Person';
+import { user } from '../../constants';
 
 const Navbar = () => {
+    const [showLogout, setShowLogout] = useState(false)
+    const handleUser = () => {
+        setShowLogout(!showLogout)
+    }
+    const handleLogOut = () => {
+        if (window.confirm('Are you sure to LogOut?')) {
+            localStorage.setItem('user', JSON.stringify({ ...user, islogged: false }))
+            window.location.reload()
+        }
+    }
     return (
         <nav className='navbar'>
             <div className="left">
@@ -21,9 +32,27 @@ const Navbar = () => {
                     <li>
                         <NavLink to='/trains' className='list-item'>Trains</NavLink>
                     </li>
-                    <li>
-                        <NavLink to='/login' className='list-item' ><button className='btn-login'><PersonIcon />Login</button></NavLink>
-                    </li>
+                    {user?.islogged ?
+
+                        <li>
+                            <div className="user_info">
+                                <button className='btn-user' onClick={handleUser}><PersonIcon />{user?.username.toUpperCase()}</button>
+                                <button
+                                    className={`btn-logout ${showLogout ? 'show_logout' : 'hide_logout'}`}
+                                    type='button'
+                                    onClick={handleLogOut}
+                                >Log Out</button>
+                            </div>
+                        </li>
+                        :
+                        <li>
+                            <NavLink to='/login' className='list-item' >
+                                <button className='btn-login' type='button'><PersonIcon />Login</button>
+                            </NavLink>
+                        </li>
+
+                    }
+
                 </ul>
             </div>
         </nav>

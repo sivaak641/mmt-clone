@@ -2,10 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './TrainAvailable.css'
 
-const TrainAvailable = ({ data }) => {
+const TrainAvailable = ({ trains }) => {
     return (
         <>
-            {data && data.map((train, index) => (
+            {trains && trains.map((train, index) => (
                 <div className="train_info" key={index}>
                     <table>
                         <thead>
@@ -35,16 +35,20 @@ const TrainAvailable = ({ data }) => {
                             <tr>
                                 <td>{train.to}</td>
                                 <td>{train.train_number}</td>
-                                <td>{train.kilometers}</td>
+                                <td>{train.kilometers} km</td>
                             </tr>
                         </tbody>
                         <thead>
                             <tr>
+                                <th></th>
+                                <th></th>
                                 <th>Duration:</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
+                                <td></td>
+                                <td></td>
                                 <td>{train.duration}</td>
                             </tr>
                         </tbody>

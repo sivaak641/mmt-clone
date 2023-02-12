@@ -3,8 +3,11 @@
 }
 .search-container{
     width: 100%;
+    padding: 10px;
     display: flex;
+    justify-content: center;
     align-items: center;
+    position: relative;
 }
 .search-container .input{
     width: 100%;
@@ -15,4 +18,14 @@
 input{
     width: 85%;
     padding: 10px;
+    outline-color: #1778F2;
+}
+.search-btn button{
+    padding: 8px 100px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: -35px;
+    left: 40%;
+    cursor: pointer;
+
 }
