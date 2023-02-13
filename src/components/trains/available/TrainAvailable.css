@@ -1,6 +1,6 @@
 .train_info {
-    width: 700px;
-    margin: 20px 0 0 100px;
+    width: 740px;
+    margin: 20px 100px;
     border: 2px solid #aaa;
     position: relative;
     padding: 10px;
@@ -10,25 +10,21 @@
     width: 540px;
 }
 
-table tbody tr td {
-    padding: 10px 0;
-}
-
-thead tr,
-tbody tr {
+.train_info tr {
     text-align: left;
 }
 
-thead tr th {
-    font-weight: normal;
+.train_info tr th {
+    font-weight: 400;
 }
 
-tbody tr td {
+.train_info tr td {
+    padding: 10px 0;
     font-size: 17px;
     font-weight: 900;
 }
 
-tbody tr td:first-child {
+.train_info tr td:first-child {
     font-size: 25px;
 }
 
@@ -40,4 +36,59 @@ tbody tr td:first-child {
 .booknow .btn-booknow {
     padding: 5px 40px;
     cursor: pointer;
+}
+
+.message-no_train {
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:639px) {
+    .train_info {
+        width: 100%;
+        margin: 20px 0;
+        border: 1px solid #aaa;
+        padding: 10px 5px;
+    }
+
+    .train_info table {
+        width: 100%;
+    }
+
+    .train_info .booknow {
+        display: flex;
+        justify-content: center;
+    }
+
+    .train_info tr th {
+        font-size: 12px;
+    }
+
+    .train_info tr td {
+        font-size: 15px;
+        padding: 5px 0;
+        font-weight: 700;
+    }
+
+    .train_info tr td:first-child {
+        font-size: 16px;
+    }
+
+    .message-no_train {
+        height: 20vh;
+
+    }
+}
+
+@media screen and (min-width:640px) and (max-width:949px) {
+    .train_info {
+        width: 90%;
+        margin: 20px 40px;
+    }
+
+    .train_info table {
+        width: 90%;
+    }
 }

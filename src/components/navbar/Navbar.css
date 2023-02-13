@@ -10,11 +10,11 @@
 }
 
 .navbar .left {
-    width: 75%;
+    width: 70%;
 }
 
 .navbar .right {
-    width: 25%;
+    width: 30%;
 }
 
 .navbar .right ul {
@@ -25,8 +25,13 @@
 }
 
 ul li .list-item {
+    font-size: 18px;
     text-decoration: none;
     color: inherit;
+}
+
+ul li .list-item:hover {
+    font-weight: 700;
 }
 
 ul li .btn-login,
@@ -41,20 +46,49 @@ ul li .btn-logout {
     align-items: center;
     cursor: pointer;
 }
-.btn-logout{
+
+.btn-logout {
     color: red;
+    transition: all 0.5s ease;
 }
-.user_info{
+
+.user_info {
     position: relative;
 }
-.hide_logout{
+
+.hide_logout {
     position: absolute;
     top: 40px;
     right: -100px;
 
 }
-.show_logout{
+
+.show_logout {
     position: absolute;
     top: 40px;
     right: 0;
+}
+
+.navbar .right-menu {
+    display: none;
+}
+
+@media screen and (max-width: 639px) {
+    .navbar .right {
+        display: none;
+    }
+
+    .navbar .right-menu {
+        display: block;
+    }
+}
+
+@media screen and (min-width:640px) and (max-width:1024px) {
+    .navbar .left {
+        width: 45%;
+    }
+
+    .navbar .right {
+        width: 55%;
+    }
 }
