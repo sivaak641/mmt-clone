@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 import './Navbar.css'
 import logo from '../../assets/images/Logo.png'
 import PersonIcon from '@mui/icons-material/Person';
+import MenuIcon from '@mui/icons-material/Menu';
 import { user } from '../../constants';
 
 const Navbar = () => {
@@ -41,7 +42,7 @@ const Navbar = () => {
                                     className={`btn-logout ${showLogout ? 'show_logout' : 'hide_logout'}`}
                                     type='button'
                                     onClick={handleLogOut}
-                                >Log Out</button>
+                                >Logout</button>
                             </div>
                         </li>
                         :
@@ -54,6 +55,9 @@ const Navbar = () => {
                     }
 
                 </ul>
+            </div>
+            <div className="right-menu">
+                <MenuIcon/>
             </div>
         </nav>
     )

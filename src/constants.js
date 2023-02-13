@@ -1,5 +1,9 @@
 
+//validate email (RegEx pattern)
+export const pattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/; 
 
-export const pattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/; //validate email (RegEx pattern)
+//access user from localStorage
+export const user = JSON.parse(localStorage.getItem('user')) 
 
-export const user = JSON.parse(localStorage.getItem('user')) //access user from localStorage
+//fee and surcharges
+export const fee_n_surcharges = '740'

@@ -50,7 +50,10 @@ const Login = () => {
   }
   useEffect(() => {
     emailRef.current.focus()
-  }, [])
+    if (user?.islogged) {
+      navigate('/')
+    }
+  }, [user?.islogged])
   return (
     <div className="login">
       <div className='container'>

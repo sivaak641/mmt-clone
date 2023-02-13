@@ -34,7 +34,13 @@ const SignUp = () => {
             password_errorRef.current.style.display = 'block'
         }
         else {
-            localStorage.setItem('user', JSON.stringify({ username: name, email: email, password: password, islogged: false }))
+            localStorage.setItem('user',
+                JSON.stringify({
+                    username: name,
+                    email: email,
+                    password: password,
+                    islogged: false
+                }))
             successRef.current.style.display = 'block'
             setTimeout(() => {
                 navigate('/login')
@@ -70,6 +76,7 @@ const SignUp = () => {
             <div className="container">
                 <h1 className="title">Sign Up</h1>
                 <form action="#" method="post" className="signup_form" onSubmit={handleSignUp}>
+                    <div id="success" ref={successRef}>Account successfully created</div>
                     <label htmlFor="name">Name</label>
                     <input
                         type="text"
@@ -105,7 +112,6 @@ const SignUp = () => {
                     />
                     <div id="pass_error" ref={password_errorRef}>Password must be 6 characters</div>
                     <input type="submit" value="Create account" />
-                    <div id="success" ref={successRef}>Account successfully created</div>
                 </form>
                 <div className="log_in">Existing user? <Link to='/login'>Log In</Link></div>
             </div>

@@ -3,13 +3,20 @@ import React, { useEffect, useState } from 'react'
 import FlightAvailable from './available/FlightAvailable'
 import FlightSearch from './search/FlightSearch'
 import './Flights.css'
+import Loader from '../loader/Loader'
 
 const Flights = () => {
     const [flights, setFlights] = useState([])
     const [fetch, setFetch] = useState(false)
+    const [isLoading, setIsLoading] = useState(true)
     useEffect(() => {
         axios.get('https://content.newtonschool.co/v1/pr/63b85b1209f0a79e89e17e3a/flights')
-            .then(res => setFlights(res.data))
+            .then(res => {
+                setFlights(res.data)
+                setTimeout(() => {
+                    setIsLoading(false)
+                }, 300)
+            })
             .catch(error => console.error(error))
     }, [fetch])
     return (
@@ -20,7 +27,8 @@ const Flights = () => {
             <div className="available">
 
                 <h2 className='title'>Available Tickets</h2>
-                <FlightAvailable flights={flights} />
+               
+                {isLoading ? <Loader /> : <FlightAvailable flights={flights} />}
 
             </div>
 
