@@ -42,9 +42,6 @@
 input::placeholder {
     opacity: 0.5;
 }
-/* input:hover{
-    border:2px solid #1778F2;
-} */
 
 .signup_form input[type='text'] {
     margin-bottom: 10px;
@@ -97,4 +94,20 @@ input::placeholder {
 .container .log_in {
     text-align: center;
     margin-bottom: 30px;
+}
+
+@media screen and (max-width:375px) {
+    .signup_form input {
+        width: 300px;
+    }
+
+}
+
+@media screen and (max-width:639px) {
+    .signup_form input[type='submit'] {
+        margin: 45px 0 0;
+    }
+    .container .title{
+        padding: 5px 0;
+    }
 }
