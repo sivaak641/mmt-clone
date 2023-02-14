@@ -24,6 +24,10 @@
     align-items: center;
 }
 
+.right-menu ul {
+    list-style: none;
+}
+
 ul li .list-item {
     font-size: 18px;
     text-decoration: none;
@@ -121,9 +125,6 @@ ul li .btn-logout {
         margin: 10px 0;
     }
 
-    li .list-item {
-        text-decoration: none;
-    }
 }
 
 @media screen and (min-width:640px) and (max-width:1024px) {
