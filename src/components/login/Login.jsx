@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { pattern, user } from '../../constants'
+import { email_Pattern, user } from '../../constants'
 import './Login.css'
 
 const Login = () => {
@@ -35,7 +35,7 @@ const Login = () => {
   }
   const handleEmailInput = (e) => {
     setEmail(e.target.value)
-    if (email.match(pattern)) {
+    if (email.match(email_Pattern)) {
       email_errorRef.current.style.display = 'none'
       emailRef.current.style.outlineColor = '#1778F2'
     }

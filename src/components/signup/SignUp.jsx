@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { pattern } from '../../constants'
+import { email_Pattern } from '../../constants'
 import './SignUp.css'
 
 const SignUp = () => {
@@ -23,7 +23,7 @@ const SignUp = () => {
             nameRef.current.focus()
             name_errorRef.current.style.display = 'block'
         }
-        else if (!(email.match(pattern))) {
+        else if (!(email.match(email_Pattern))) {
             emailRef.current.style.outlineColor = 'red'
             emailRef.current.focus()
             email_errorRef.current.style.display = 'block'
@@ -56,7 +56,7 @@ const SignUp = () => {
     }
     const handleEmailInput = (e) => {
         setEmail(e.target.value)
-        if (email.match(pattern)) {
+        if (email.match(email_Pattern)) {
             email_errorRef.current.style.display = 'none'
             emailRef.current.style.outlineColor = '#1778F2'
         }
