@@ -1,10 +1,9 @@
 .chekout-container {
-    padding-top: 40px;
     border-top: 2px solid #aaa;
-
 }
 
 .book-successful {
+    margin: 20px 20px 0;
     color: green;
     background-color: rgba(0, 255, 0, 0.1);
     text-align: center;
@@ -20,7 +19,8 @@
     justify-content: space-around;
 }
 
-.checkout .left {
+.checkout .left,
+.checkout .right {
     width: 45%;
     height: auto;
     padding: 10px;
@@ -47,13 +47,6 @@
     font-weight: 900;
 }
 
-.checkout .right {
-    width: 45%;
-    height: auto;
-    padding: 10px;
-    border: 2px solid #aaa;
-}
-
 .checkout .right input {
     width: 90%;
     margin-top: 15px;
@@ -70,21 +63,26 @@
     display: none;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
+    .chekout-container {
+        padding-top: 0;
+    }
+
     .checkout {
-        padding: 40px;
+        padding: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .checkout .left {
-        width: 100%;
-        margin-bottom: 40px;
-    }
-
+    .checkout .left,
     .checkout .right {
         width: 100%;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
     }
+
+    .book-successful {
+        margin: 5px;
+    }
+
 }

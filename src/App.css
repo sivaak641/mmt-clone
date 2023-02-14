@@ -6,7 +6,6 @@
   overflow-x: hidden;
   scroll-behavior: smooth;
   scrollbar-width: none;   /*  for firefox */
-  transition: all 0s ease;
 }
 
 .app::-webkit-scrollbar {   /*  for chromium browsers */
