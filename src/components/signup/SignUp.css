@@ -101,13 +101,26 @@ input::placeholder {
         width: 300px;
     }
 
+    .signup_form #name_error,
+    .signup_form #email_error,
+    .signup_form #pass_error {
+        width: 298px;
+    }
+
 }
 
 @media screen and (max-width:639px) {
     .signup_form input[type='submit'] {
         margin: 45px 0 0;
     }
-    .container .title{
+
+    .container .title {
         padding: 5px 0;
+    }
+}
+
+@media screen and (min-width:640px) and (max-width:847px) {
+    .signup_form {
+        padding: 20px 40px 0;
     }
 }
