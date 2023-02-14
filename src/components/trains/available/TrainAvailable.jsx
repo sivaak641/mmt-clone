@@ -1,10 +1,12 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import BookTicket from '../../bookTicket/BookTicket'
 import './TrainAvailable.css'
 
 const TrainAvailable = ({ trains }) => {
     return (
         <>
+            {trains.length === 0 && <h3 className='message-no_train'>Sorry! No tains available</h3>}
+
             {trains && trains.map((train, index) => (
                 <div className="train_info" key={index}>
                     <table>
@@ -53,8 +55,8 @@ const TrainAvailable = ({ trains }) => {
                             </tr>
                         </tbody>
                     </table>
-                    <div className="booknow">
-                        <Link to='/checkout'><button className='btn-booknow' type='button'>Book</button></Link>
+                    <div className="book-ticket">
+                        <BookTicket price={train.price} />
                     </div>
                 </div>
             ))}

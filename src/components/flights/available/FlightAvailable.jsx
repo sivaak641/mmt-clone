@@ -1,23 +1,12 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
-import { user } from '../../../constants'
+import BookTicket from '../../bookTicket/BookTicket'
 import './FlightAvailable.css'
 
 const FlightAvailable = ({ flights }) => {
-    const navigate = useNavigate()
-    const handleBook = (fare) => {
-        if (user?.islogged) {
-            localStorage.setItem('user', JSON.stringify({ ...user, price: fare }))
-            navigate('/checkout')
-            window.location.reload()
-        }
-        else {
-            navigate('/login')
-        }
-    }
+
     return (
         <>
-            {flights.length <= 0 && <h3 className='message-no_flight'>Sorry! No flights available</h3>}
+            {flights.length === 0 && <h3 className='message-no_flight'>Sorry! No flights available</h3>}
 
             {flights && flights.map((flight, index) => (
                 <div className="flight_info" key={index}>
@@ -51,7 +40,7 @@ const FlightAvailable = ({ flights }) => {
                                 <td>
                                     {flight.return.returnTime} | {flight.return.returnDate}
                                 </td>
-                                <td>{flight.via !== '' ? flight.via : '-'}</td>
+                                <td>{flight.via != '' ? flight.via : '-'}</td>
                             </tr>
                         </tbody>
                         <thead>
@@ -69,12 +58,8 @@ const FlightAvailable = ({ flights }) => {
                             </tr>
                         </tbody>
                     </table>
-                    <div className="booknow">
-                        <button
-                            className='btn-booknow'
-                            type='button'
-                            onClick={() => handleBook(flight.price)}
-                        >Book</button>
+                    <div className="book-ticket">
+                        <BookTicket price={flight.price} />
                     </div>
                 </div>
             ))}

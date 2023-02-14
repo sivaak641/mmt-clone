@@ -28,14 +28,9 @@
     font-size: 25px;
 }
 
-.flight_info .booknow {
+.flight_info .book-ticket {
     display: flex;
     justify-content: flex-end;
-}
-
-.booknow .btn-booknow {
-    padding: 5px 40px;
-    cursor: pointer;
 }
 
 .message-no_flight {
@@ -57,7 +52,7 @@
         width: 100%;
     }
 
-    .flight_info .booknow {
+    .flight_info .book {
         display: flex;
         justify-content: center;
     }

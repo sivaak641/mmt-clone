@@ -28,14 +28,9 @@
     font-size: 25px;
 }
 
-.hotel_info .booknow {
+.hotel_info .book-ticket {
     display: flex;
     justify-content: flex-end;
-}
-
-.booknow .btn-booknow {
-    padding: 5px 40px;
-    cursor: pointer;
 }
 
 .message-no_hotel {
@@ -57,7 +52,7 @@
         width: 100%;
     }
 
-    .hotel_info .booknow {
+    .hotel_info .book-ticket {
         display: flex;
         justify-content: center;
     }
@@ -87,6 +82,7 @@
         width: 90%;
         margin: 20px 40px;
     }
+
     .hotel_info table {
         width: 90%;
     }
