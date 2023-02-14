@@ -52,7 +52,7 @@
         width: 100%;
     }
 
-    .flight_info .book-tickets {
+    .flight_info .book-ticket {
         display: flex;
         justify-content: center;
     }
