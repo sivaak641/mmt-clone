@@ -5,9 +5,16 @@
   background-color: #fff;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  scrollbar-width: none;   /*  for firefox */
+  scrollbar-width: none;
+  /*  for firefox */
 }
 
-.app::-webkit-scrollbar {   /*  for chromium browsers */
+.app::-webkit-scrollbar {
+  /*  for chromium browsers */
   display: none;
+}
+
+.search-btn button:hover {
+  border-color: #1778F2;
+  color: #1778F2;
 }

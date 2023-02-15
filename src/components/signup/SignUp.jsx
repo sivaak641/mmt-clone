@@ -55,7 +55,7 @@ const SignUp = () => {
         }
     }
     const handleEmailInput = (e) => {
-        setEmail(e.target.value)
+        setEmail(e.target.value.toLowerCase())
         if (email.match(email_Pattern)) {
             email_errorRef.current.style.display = 'none'
             emailRef.current.style.outlineColor = '#1778F2'
