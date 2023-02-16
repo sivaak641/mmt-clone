@@ -44,6 +44,7 @@ const SignUp = () => {
             successRef.current.style.display = 'block'
             setTimeout(() => {
                 navigate('/login')
+                window.location.reload()
             }, 1000)
         }
     }
