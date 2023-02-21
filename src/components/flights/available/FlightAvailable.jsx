@@ -22,7 +22,7 @@ const FlightAvailable = ({ flights }) => {
                             <tr>
                                 <td>{flight.from}</td>
                                 <td>
-                                    {flight.departure.departureTime} | {flight.departure.departureDate}
+                                    {`${flight.departure.departureTime} | ${flight.departure.departureDate}`}
                                 </td>
                                 <td>₹{flight.price}</td>
                             </tr>

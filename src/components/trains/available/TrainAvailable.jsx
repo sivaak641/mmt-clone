@@ -21,7 +21,7 @@ const TrainAvailable = ({ trains }) => {
                             <tr>
                                 <td>{train.from}</td>
                                 <td>
-                                    {train.departure.departureTime} | {train.departure.departureDate}
+                                    {`${train.departure.departureTime} | ${train.departure.departureDate}`}
                                 </td>
                                 <td>₹{train.price}</td>
                             </tr>
