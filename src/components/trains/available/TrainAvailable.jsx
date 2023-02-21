@@ -23,7 +23,7 @@ const TrainAvailable = ({ trains }) => {
                                 <td>
                                     {train.departure.departureTime} | {train.departure.departureDate}
                                 </td>
-                                <td>{train.price}</td>
+                                <td>₹{train.price}</td>
                             </tr>
                         </tbody>
                         <thead>

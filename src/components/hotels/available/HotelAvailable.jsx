@@ -21,7 +21,7 @@ const HotelAvailable = ({ hotels }) => {
                             <tr>
                                 <td>{hotel.hotel_name}</td>
                                 <td>{hotel.check_in}</td>
-                                <td>{hotel.price_per_night} per night</td>
+                                <td>₹{hotel.price_per_night} per night</td>
                             </tr>
                         </tbody>
                         <thead>
