@@ -10,7 +10,7 @@ const Flights = () => {
     const [fetch, setFetch] = useState(false)
     const [isLoading, setIsLoading] = useState(true)
     useEffect(() => {
-        axios.get('https://content.newtonschool.co/v1/pr/63b85b1209f0a79e89e17e3a/flights')
+        axios.get('https://content.newtonschool.co/v1/pr/63b86a1d735f93791e09cb11/flights')
             .then(res => {
                 setFlights(res.data)
                 setTimeout(() => {
@@ -27,7 +27,7 @@ const Flights = () => {
             <div className="available">
 
                 <h2 className='title'>Available Tickets</h2>
-               
+
                 {isLoading ? <Loader /> : <FlightAvailable flights={flights} />}
 
             </div>
