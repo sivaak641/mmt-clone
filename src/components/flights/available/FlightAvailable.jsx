@@ -38,7 +38,7 @@ const FlightAvailable = ({ flights }) => {
                             <tr>
                                 <td>{flight.to}</td>
                                 <td>
-                                    {flight.return.returnTime} | {flight.return.returnDate}
+                                    {`${flight.return.returnTime} | ${flight.return.returnDate}`}
                                 </td>
                                 <td>{flight.via != '' ? flight.via : '-'}</td>
                             </tr>
