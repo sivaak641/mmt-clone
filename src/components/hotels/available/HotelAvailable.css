@@ -6,6 +6,10 @@
     padding: 10px;
 }
 
+.hotel_info:hover {
+    box-shadow: 0 0 20px -8px black;
+}
+
 .hotel_info table {
     width: 540px;
 }
@@ -47,6 +51,7 @@
         border: 1px solid #aaa;
         padding: 10px 5px;
     }
+
 
     .hotel_info table {
         width: 100%;

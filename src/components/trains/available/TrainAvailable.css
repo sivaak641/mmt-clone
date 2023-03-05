@@ -6,6 +6,10 @@
     padding: 10px;
 }
 
+.train_info:hover {
+    box-shadow: 0 0 20px -8px black;
+}
+
 .train_info table {
     width: 540px;
 }

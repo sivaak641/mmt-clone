@@ -6,6 +6,10 @@
     padding: 10px;
 }
 
+.flight_info:hover {
+    box-shadow: 0 0 20px -8px black;
+}
+
 .flight_info table {
     width: 540px;
 }
