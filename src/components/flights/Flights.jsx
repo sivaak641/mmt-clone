@@ -4,6 +4,8 @@ import FlightAvailable from './available/FlightAvailable'
 import FlightSearch from './search/FlightSearch'
 import './Flights.css'
 import Loader from '../loader/Loader'
+import { Offers } from '../Offers/Offers'
+import { Footer } from '../Footer/Footer'
 
 const Flights = () => {
     const [flights, setFlights] = useState([])
@@ -24,12 +26,19 @@ const Flights = () => {
             <div className="search">
                 <FlightSearch flights={flights} setFlights={setFlights} setFetch={setFetch} fetch={fetch} />
             </div>
+
             <div className="available">
 
                 <h2 className='title'>Available Tickets</h2>
 
                 {isLoading ? <Loader /> : <FlightAvailable flights={flights} />}
 
+            </div>
+            <div className='offer-tab'>
+               <Offers/>
+            </div>
+            <div>
+                <Footer/>
             </div>
 
         </div>

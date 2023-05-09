@@ -11,4 +11,14 @@
 .flights .available {
   width: 100%;
   padding: 20px;
+  display: grid;
+  place-content: center;
+
+}
+.available h2{
+  text-align: center;
+}
+
+.offer-tab{
+  width: 100%;
 }

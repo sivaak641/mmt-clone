@@ -7,7 +7,7 @@ const FlightAvailable = ({ flights }) => {
     return (
         <>
             {flights.length === 0 && <h3 className='message-no_flight'>Sorry! No flights available</h3>}
-
+            <div className='flight-tickets'>
             {flights && flights.map((flight, index) => (
                 <div className="flight_info" key={index}>
                     <table>
@@ -63,6 +63,7 @@ const FlightAvailable = ({ flights }) => {
                     </div>
                 </div>
             ))}
+            </div>
         </>
     )
 }
